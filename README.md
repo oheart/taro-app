@@ -25,3 +25,7 @@ this.setState({
 H5与小程序有差别
 React框架中的生命周期函数被保留
 新增支持小程序的几个生命周期
+=======
+# taro-app
+taro app
+
