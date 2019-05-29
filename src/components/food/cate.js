@@ -1,6 +1,8 @@
 import Taro, {Component} from '@tarojs/taro'
 import {View, Text, Image} from '@tarojs/components'
 import './cate.less'
+import {getEvent} from '../../utils/common'
+let event = getEvent();
 
 class Cate extends Component{
     constructor(){
@@ -46,12 +48,14 @@ class Cate extends Component{
             }, ()=> {
                 this.props.onChangeCate && this.props.onChangeCate(this.state.selCate);
             })
+            event.emit('changeCate');
         }else if(!this.state.selCate){
             this.setState({
                 selCate: item
             }, ()=> {
                 this.props.onChangeCate && this.props.onChangeCate(this.state.selCate);
             })
+            event.emit('changeCate');
         }
     }
     render(){
