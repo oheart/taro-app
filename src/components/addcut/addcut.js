@@ -22,6 +22,7 @@ class AddCut extends Component{
            if(this.state.Num > 0){
               setFoodCount(this.props.food, this.state.Num, "cut", ()=> {
                 this.setState({Num: getFoodCount(this.props.food)})
+                myEvent.emit("addcut");
               });
            }else{
                console.error('当前加减菜品出现异常')
@@ -32,6 +33,7 @@ class AddCut extends Component{
         if(this.props.food){
             setFoodCount(this.props.food, this.state.Num, "add", ()=> {
                 this.setState({Num: getFoodCount(this.props.food)})
+                myEvent.emit("addcut");
             });
         }
     }
