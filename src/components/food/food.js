@@ -53,7 +53,7 @@ class Food extends Component{
                     <AtTabsPane current={current} index={0} >
                         <View className="food-body">
                             <Cate onChangeCate={this.changeCate.bind(this)}></Cate>
-                            <FoodList selCate={selCate} currentList={currentList}></FoodList>
+                            <FoodList class="food-list-box"  selCate={selCate} currentList={currentList}></FoodList>
                         </View>
                     </AtTabsPane>
                     <AtTabsPane current={current} index={1}>
